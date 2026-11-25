@@ -1,0 +1,10 @@
+# Secrets - they live in the private folder, never here
+token.json
+client_secret*.json
+credentials.json
+.env
+
+# Python / uv
+.venv/
+__pycache__/
+*.pyc

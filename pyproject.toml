@@ -1,0 +1,11 @@
+[project]
+name = "gmail-calendar"
+version = "0.1.0"
+description = "L06 - MCP server with Gmail and Google Calendar tools (no send, no delete)"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2,<2",  # FastMCP API (v2 renamed it to MCPServer)
+    "google-api-python-client",
+    "google-auth",
+    "google-auth-httplib2",
+]
