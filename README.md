@@ -4,6 +4,24 @@ An MCP server (Python, FastMCP, stdio) that exposes Gmail and Google Calendar
 as tools for an AI agent. It reuses the Google OAuth client and `token.json`
 from L05. **There is no tool that sends email or deletes anything.**
 
+## ✅ Proof that it works
+
+One free-text request in Claude Code, with no new code written:
+
+```
+Use only the gmail-calendar MCP tools. Write a Gmail draft to myself with the subject "L06 test" and add a calendar event for today, 4 hours from now, called "MCP works".
+```
+
+Claude Code called `gmail-calendar - create_draft (MCP)` and `gmail-calendar - create_event (MCP)`.
+
+**Gmail → Drafts:** the draft "L06 test" was created and **not sent**.
+
+![Gmail draft "L06 test" created by the MCP server](screenshots/gmail-draft.png)
+
+**Google Calendar:** the event "MCP works" on 25 Nov 2026, 19:48–20:48 (4 hours after the request at 15:48, Asia/Jerusalem).
+
+![Calendar event "MCP works" created by the MCP server](screenshots/calendar-event.png)
+
 ## Tools
 
 | Tool | Google API call | What it does |
